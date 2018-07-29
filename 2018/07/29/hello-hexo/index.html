@@ -1,10 +1,106 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="闻道有先后 术业有专攻"><title>python爬虫学习笔记 | 请叫我凯哥</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">python爬虫学习笔记</h1><a id="logo" href="/.">请叫我凯哥</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">python爬虫学习笔记</h1><div class="post-meta"><a href="/2018/07/29/hello-hexo/#comments" class="comment-count"></a><p><span class="date">Jul 29, 2018</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><h5 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h5><p>全局匹配函数使用格式    re.compile(正则表达式).findall(源字符串)</p>
-<p><table><br>    <tr><br>        <td>普通字符</td><br>        <td>正常匹配</td><br>    </tr><br>    <tr><br>        <td>\n</td><br>        <td>匹配换行符</td><br>    </tr><br>    <tr><br>        <td>\t</td><br>        <td>匹配制表符</td><br>    </tr><br>    <tr><br>        <td>\w</td><br>        <td>匹配字母、数字、下划线</td><br>    </tr><br>    <tr><br>        <td>\W</td><br>        <td>匹配除字母、数字、下划线</td><br>    </tr><br>    <tr><br>        <td>\d</td><br>        <td>匹配十进制数字</td><br>    </tr><br>    <tr><br>        <td>\D</td><br>        <td>匹配除十进制数字</td><br>    </tr><br>    <tr><br>        <td>\s</td><br>        <td>匹配空白字符</td><br>    </tr><br>    <tr><br>        <td>\S</td><br>        <td>匹配除空白字符</td><br>    </tr><br>    <tr><br>        <td>[ab89x]</td><br>        <td>原子表，匹配ab89x中的任意一个</td><br>    </tr><br>    <tr><br>        <td>[^ab89x]</td><br>        <td>原子表，匹配除ab89x以外的任意一个字符</td><br>    </tr><br>    <tr><br>        <td>.</td><br>        <td>匹配除换行外任意一个字符</td><br>    </tr><br>    <tr><br>        <td>^</td><br>        <td>匹配开始位置</td><br>    </tr><br>    <tr><br>        <td>$</td><br>        <td>匹配结束位置</td><br>    </tr><br>    <tr><br>        <td><em></em></td><br>        <td>前一个字符出现0\1\多次</td><br>    </tr><br>    <tr><br>        <td></td><br>        <td>前一个字符出现0\1\多次</td><br>    </tr><br>    <tr><br>        <td>?</td><br>        <td>前一个字符出现0\1次</td><br>    </tr><br>    <tr><br>        <td>+</td><br>        <td>前一个字符出现1\多次</td><br>    </tr><br>    <tr><br>        <td>{n}</td><br>        <td>前一个字符恰好出现n次</td><br>    </tr><br>    <tr><br>        <td>{n,}</td><br>        <td>前一个字符至少n次</td><br>    </tr><br>    <br>    <tr><br>        <td>{n,m}</td><br>        <td>前一个字符至少n，至多m次</td><br>    </tr><br>    <br>    <tr><br>        <td>|</td><br>        <td>模式选择符或</td><br>    </tr><br>    <tr><br>        <td>()</td><br>        <td>模式单元，通俗来说就是：想提取出什么内容，就在正则中用小括号将其括起来</td><br>    </tr></table></p>
-<table>
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="闻道有先后 术业有专攻"><title>python爬虫学习笔记 | 请叫我凯哥</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">python爬虫学习笔记</h1><a id="logo" href="/.">请叫我凯哥</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">python爬虫学习笔记</h1><div class="post-meta"><a href="/2018/07/29/hello-hexo/#comments" class="comment-count"></a><p><span class="date">Jul 29, 2018</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><p>学习python爬虫之前需掌握的正则表达式和Xpath表达式的基础知识<br>导入包import re</p>
+<p>全局匹配函数使用格式    re.compile(正则表达式).findall(源字符串)</p>
 
-
-
-
+<h5 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h5><table>
+<thead>
+<tr>
+<th>字符</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通字符</td>
+<td style="text-align:center">正常匹配</td>
+</tr>
+<tr>
+<td>\n</td>
+<td style="text-align:center">匹配换行符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td style="text-align:center">匹配制表符</td>
+</tr>
+<tr>
+<td>\w</td>
+<td style="text-align:center">匹配字母、数字、下划线</td>
+</tr>
+<tr>
+<td>\W</td>
+<td style="text-align:center">匹配除字母、数字、下划线</td>
+</tr>
+<tr>
+<td>\d</td>
+<td style="text-align:center">匹配十进制数字</td>
+</tr>
+<tr>
+<td>\D</td>
+<td style="text-align:center">匹配除十进制数字</td>
+</tr>
+<tr>
+<td>\s</td>
+<td style="text-align:center">匹配空白字符</td>
+</tr>
+<tr>
+<td>\S</td>
+<td style="text-align:center">匹配除空白字符</td>
+</tr>
+<tr>
+<td>[ab89x]</td>
+<td style="text-align:center">原子表，匹配ab89x中的任意一个</td>
+</tr>
+<tr>
+<td>[^ab89x]</td>
+<td style="text-align:center">原子表，匹配除ab89x以外的任意一个字符</td>
+</tr>
+<tr>
+<td>.</td>
+<td style="text-align:center">匹配除换行外任意一个字符</td>
+</tr>
+<tr>
+<td>^</td>
+<td style="text-align:center">匹配开始位置</td>
+</tr>
+<tr>
+<td>$</td>
+<td style="text-align:center">匹配结束位置</td>
+</tr>
+<tr>
+<td>*</td>
+<td style="text-align:center">前一个字符出现0\1\多次</td>
+</tr>
+<tr>
+<td>?</td>
+<td style="text-align:center">前一个字符出现0\1次</td>
+</tr>
+<tr>
+<td>+</td>
+<td style="text-align:center">前一个字符出现1\多次</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td style="text-align:center">前一个字符恰好出现n次</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td style="text-align:center">前一个字符至少n次</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td style="text-align:center">前一个字符至少n，至多m次</td>
+</tr>
+<tr>
+<td>｜</td>
+<td style="text-align:center">模式选择符或</td>
+</tr>
+<tr>
+<td>()</td>
+<td style="text-align:center">模式单元，通俗来说就是：想提取出什么内容，就在正则中用小括号将其括起来</td>
+</tr>
+</tbody>
+</table>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def test():</span><br><span class="line">    str = &apos;study12345python&apos;</span><br><span class="line">    pat = &apos;\w\d[python]\w&apos;</span><br><span class="line">    print(re.compile(pat).findall(str))</span><br></pre></td></tr></table></figure></p>
+<p>输出：[‘45py’]</p>
 <h5 id="Xpath"><a href="#Xpath" class="headerlink" title="Xpath"></a>Xpath</h5><ul>
 <li><font color="##FF0000">/</font> 逐层提取</li>
 <li><font color="##FF0000">text()</font> 提取标签下面的文本</li>
@@ -12,5 +108,5 @@
 <li><font color="##FF0000">//标签名[@属性=’属性值’]</font> 提取属性为XX的标签</li>
 <li><font color="##FF0000">@属性名</font>代表取某个属性值</li>
 </ul>
-</table></div><div class="tags"></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#正则表达式"><span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Xpath"><span class="toc-text">Xpath</span></a></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/29/hello-hexo/">python爬虫学习笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 链接</i></div><ul></ul><a href="https://github.com/fairytaildhk/fairytaildhk.github.io/tree/master" title="github地址" target="_blank">github地址</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">Kevin Ding.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</div><div class="tags"><a href="/tags/python/">python</a></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#正则表达式"><span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Xpath"><span class="toc-text">Xpath</span></a></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/29/hello-hexo/">python爬虫学习笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/python/" style="font-size: 15px;">python</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 链接</i></div><ul></ul><a href="https://github.com/fairytaildhk/fairytaildhk.github.io/tree/master" title="github地址" target="_blank">github地址</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">Kevin Ding.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 </script></body></html>
